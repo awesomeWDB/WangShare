@@ -1,7 +1,8 @@
+const utils = require('./utils')
 module.exports = {
   title: '吹口琴的喵~',
   description: '分享日常积累的相关公用方法、组件',
-  base: '/',
+  // base: '/WangShare/',
   // cache: false,
   plugins: [ // 插件：demo-block样式、代码复制
     'demo-container', // demo-block预览
@@ -48,52 +49,60 @@ module.exports = {
   },
   themeConfig: {
     smoothScroll: true,
-    nav: [{
-      text: '指南',
-      link: '/zh/guide/'
-    }, {
-      text: '资源',
-      link: '/zh/resource/'
-    }, {
-      text: '交流',
-      link: 'https://awesomewdb.github.io/WangShare/'
-    }],
-    sidebarDepth: 2,
-    // sidebar: 'auto'
-    sidebar: {
-      '/zh/guide/': [{
-        title: '入门',
-        collapsable: false, // false 让一个组永远都是展开状态
-        children: [
-          ['/zh/guide/introduction', '介绍'],
-          ['/zh/guide/installation', '安装'],
-          ['/zh/guide/quickstart', '快速上手'],
-        ]
+    nav: [
+      // {
+      //   text: 'guide',
+      //   link: '/zh/guide/'
+      // },
+      {
+        text: 'blog',
+        link: '/zh/blog/'
       }, {
-        title: 'UI组件',
-        collapsable: false,
-        children: [
-          ['/zh/guide/wang-ui/wang-el-search', 'wang-el-search'],
-          ['/zh/guide/wang-ui/wang-van-search', 'wang-van-search'],
-        ]
+        text: 'book',
+        link: '/zh/book/'
       }, {
-        title: '工具函数',
-        collapsable: false,
-        children: [
-          ['/zh/guide/wang-utils/date', 'date'],
-          ['/zh/guide/wang-utils/storage', 'storage'],
-          ['/zh/guide/wang-utils/request', 'request'],
-        ]
+        text: 'resource',
+        link: '/zh/resource/'
+      }, {
+        text: 'GitHub',
+        link: 'https://github.com/awesomeWDB'
       }],
-      '/zh/resource/': [{
-        title: '资源下载/地址',
-        collapsable: false, // false 让一个组永远都是展开状态
-        children: [
-          ['/zh/resource/reset-css', 'reset.css'],
-          ['/zh/resource/sites', '常用网站']
-        ]
-      }]
-    }
+    sidebarDepth: 2,
+    sidebar: utils.inferSiderbars()
+    // sidebar: {
+    //   '/zh/guide/': [{
+    //     title: '入门',
+    //     collapsable: false, // false 让一个组永远都是展开状态
+    //     children: [
+    //       ['/zh/guide/introduction', '介绍'],
+    //       ['/zh/guide/installation', '安装'],
+    //       ['/zh/guide/quickstart', '快速上手'],
+    //     ]
+    //   }, {
+    //     title: 'UI组件',
+    //     collapsable: false,
+    //     children: [
+    //       ['/zh/guide/wang-ui/wang-el-search', 'wang-el-search'],
+    //       ['/zh/guide/wang-ui/wang-van-search', 'wang-van-search'],
+    //     ]
+    //   }, {
+    //     title: '工具函数',
+    //     collapsable: false,
+    //     children: [
+    //       ['/zh/guide/wang-utils/date', 'date'],
+    //       ['/zh/guide/wang-utils/storage', 'storage'],
+    //       ['/zh/guide/wang-utils/request', 'request'],
+    //     ]
+    //   }],
+    //   '/zh/resource/': [{
+    //     title: '资源下载/地址',
+    //     collapsable: false, // false 让一个组永远都是展开状态
+    //     children: [
+    //       ['/zh/resource/reset-css', 'reset.css'],
+    //       ['/zh/resource/sites', '常用网站']
+    //     ]
+    //   }]
+    // }
   },
   locales: {
     // 键名是该语言所属的子路径
